@@ -1,10 +1,6 @@
 name: Test server launches without errors
 
-on:
-  push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
+on: push
 
 jobs:
   test:
@@ -13,8 +9,8 @@ jobs:
     - name: Checkout ComfyUI
       uses: actions/checkout@v4
       with:
-        repository: "comfyanonymous/ComfyUI"
-        path: "ComfyUI"
+        repository: comfyanonymous/ComfyUI
+        path: ComfyUI
     - uses: actions/setup-python@v4
       with:
         python-version: '3.10'
